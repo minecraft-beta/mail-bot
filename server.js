@@ -1,10 +1,11 @@
 const express = require('express');
 const app = express();
+const cors = require('cors');
 const port = 6969;
 const nodemailer = require('nodemailer');
 let emailSend;
 
-
+app.use(cors());
 // Middleware to parse plain text requests
 app.use(express.text());
 
